@@ -11,7 +11,8 @@ public class NekoChanController : MonoBehaviour
 	[SerializeField] Sprite[] idle;
 	[SerializeField] Sprite jump;
 	[SerializeField] Sprite banzai;
-	const float jumpPower = 900;
+	[SerializeField] AudioClip NekoChanJump;
+	const float jumpPower = 700;
 	float time = 0;
 	int idx = 0;
 	Rigidbody2D rigid2D;
@@ -59,13 +60,10 @@ public class NekoChanController : MonoBehaviour
 		if (Keyboard.current.upArrowKey.wasPressedThisFrame && rigid2D.linearVelocityY == 0)
 		{
 			rigid2D.AddForce(transform.up * jumpPower);
+			spriteRenderer.sprite = jump;
+			AudioSource.PlayClipAtPoint(NekoChanJump, transform.position);
 		}
 
-		// ジャンプが確認された場合、スプライトを変更
-		if (rigid2D.linearVelocityY != 0)
-		{
-			spriteRenderer.sprite = jump;
-		}
 		// 地面についた場合、スプライトをフィールド「idle」に変更
 		else
 		{

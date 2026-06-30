@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: c8fddf1e50f5dbd4a84b206062da73e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - nekoPrefab: {instanceID: 0}
+  - ballPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
