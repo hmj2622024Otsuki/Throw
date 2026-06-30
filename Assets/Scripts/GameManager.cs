@@ -1,7 +1,8 @@
 using System.Threading;
-using UnityEngine;
-using TMPro;
 using System.Threading.Tasks;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,14 +48,18 @@ public class GameManager : MonoBehaviour
 			Destroy(Frame);
 		}
 
+		// タイマー開始
 		if (TimerEnabled == true)
 		{
 			Timer -= Time.deltaTime;
 			TimerText.GetComponent<TextMeshProUGUI>().text = "Time:" + Timer.ToString("F1");
 			ScoreText.GetComponent<TextMeshProUGUI>().text = "Score:" + score.ToString("F0");
+
+			// Timerが0になった場合、リザルトシーンへ遷移する
 			if (Timer < 0f)
 			{
 				Timer = 0;
+				SceneManager.LoadScene("ResultScene");
 			}
 		}
 	}

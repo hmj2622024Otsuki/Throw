@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8259700276867375725}
   - component: {fileID: 6780405214284440238}
   - component: {fileID: -2397377930236187439}
+  - component: {fileID: 8905124769138301809}
   m_Layer: 0
   m_Name: basketPrefab
   m_TagString: Basket
@@ -252,3 +253,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8905124769138301809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963568277564080765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5971d0a2d69250d4f8b6fcf984b21105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  CountDownText: {fileID: 0}
+  TimerText: {fileID: 0}
+  ScoreText: {fileID: 0}
+  Frame: {fileID: 0}

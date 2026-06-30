@@ -25,6 +25,7 @@ public class BallGenerator : MonoBehaviour
 				Ball.transform.position = nekoPrefab.transform.position;
 				Vector2 throwDirection = new Vector2(1f, 1f).normalized;
 
+				// ìäÇ∞ÇÈìÆçÏ
 				rigid2D.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
 				AudioSource.PlayClipAtPoint(ThrowSE, transform.position);
 			}
